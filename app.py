@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from flask import app
 
 # url used for data scraping
-url = 'https://en.wikipedia.org/wiki/Mercedes-Benz_Group'  # You can change this to any other webpage with sufficient data
+url = 'https://en.wikipedia.org/wiki/Mercedes-Benz_Group' 
 
 response = urllib.request.urlopen(url)
 webContent = response.read()
