@@ -10,14 +10,10 @@ sentences = data.split('. ')
 # Function to find the best answer based on cosine similarity
 def get_answer(question, sentences):
     corpus = [question] + sentences
-    
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(corpus)
-    
     similarities = cosine_similarity(X[0:1], X[1:])
-    
     best_idx = similarities.argmax()
-    
     return sentences[best_idx]
 
 # Example usage
