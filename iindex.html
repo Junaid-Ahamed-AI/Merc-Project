@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Chatbot</title>
+</head>
+<body>
+    <h1>QA Chatbot</h1>
+    <form action="/get_answer" method="POST">
+        <label for="question">Ask a question:</label>
+        <select name="question" id="question">
+            <option value="Who are the founders of Mercedes Benz?">Who are the founders of Mercedes Benz?"</option>
+            <option value="The largest Mercedes-Benz plant is in?">The largest Mercedes-Benz plant is in?</option>
+            <option value="Name few cars produced by Mercedes-Benz">Name few cars produced by Mercedes-Benz</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Get Answer">
+    </form>
+
+    {% if question and answer %}
+        <h2>Question:</h2>
+        <p>{{ question }}</p>
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
